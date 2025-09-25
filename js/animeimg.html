@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Switcher</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f8ff;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  
+  <img id="d4" src="../assets/2.jpg" alt="image" height="300px" width="300px"><br>
+
+  <h2 id="a1">Luffy</h2>
+  
+  <div>
+    <button type="button" onclick="changeImg1()">Image 1</button>
+    <button type="button" onclick="changeImg2()">Image 2</button>
+    <button type="button" onclick="changeImg3()">Image 3</button>
+  </div>
+
+  <script>
+    function changeImg1() {
+      document.getElementById("d4").src = "../assets/❥Zoro••• _ One Piece.jpg";
+      document.getElementById("a1").innerHTML = "Zoro";
+    }
+
+    function changeImg2() {
+      document.getElementById("d4").src = "../assets/img.jpg"; 
+      document.getElementById("a1").innerHTML = "Nature";
+    }
+
+    function changeImg3() {
+      document.getElementById("d4").src = "../assets/One_Piece_Zoro_Vs_King_GIF.gif";
+      document.getElementById("a1").innerHTML = "Zoro vs King";
+    }
+  </script>
+</body>
+</html>

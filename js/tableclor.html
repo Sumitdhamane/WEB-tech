@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .tables {
+      text-align: center;
+    }
+
+    .tab {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+    }
+
+    td {
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    label, input, button {
+      margin: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="tables">
+    <form>
+      <table class="tab" border="5">
+        <tr>
+          <td id="1">1</td>
+          <td id="2">2</td>
+          <td id="3">3</td>
+        </tr>
+        <tr>
+          <td id="4">4</td>
+          <td id="5">5</td>
+          <td id="6">6</td>
+        </tr>
+        <tr>
+          <td id="7">7</td>
+          <td id="8">8</td>
+          <td id="9">9</td>
+        </tr>
+      </table>
+      <br><br>
+      <label for="cell">Enter Cell Number: </label>
+      <input type="text" id="cell" placeholder="1 - 9">
+      <br><br>
+      <label for="col">Select Colour: </label>
+      <input id="col" type="color">
+      <br><br>
+      <button type="button" onclick="changeCol()">Change Background Colour</button>
+    </form>
+  </div>
+
+  <script>
+    function changeCol() {
+      let n = document.getElementById("cell").value;
+      let c = document.getElementById("col").value;
+
+      if (n < 1 || n > 9) {
+        alert("Please enter valid cell number (1-9)");
+        return;
+      }
+      document.getElementById(n).style.backgroundColor = c;
+    }
+  </script>
+</body>
+</html>

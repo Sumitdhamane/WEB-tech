@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      margin: auto;
+      padding: 20px;
+      border: 1px solid black;
+      background-color: white;
+      width: 500px;
+    }
+
+    .address-box {
+      margin: 10px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 90%;
+      height: 80px;
+      padding: 5px;
+      border: 1px solid black;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 8px 15px;
+      border: 1px solid black;
+      background-color: lightblue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="address-box">
+      <label for="permanent">Permanent Address</label>
+      <textarea id="permanent" placeholder="Enter your permanent address"></textarea>
+    </div>
+
+    <button onclick="copyAddress()">Same As Permanent</button>
+
+    <div class="address-box">
+      <label for="temporary">Temporary Address</label>
+      <textarea id="temporary"></textarea>
+    </div>
+  </div>
+
+  <script>
+    function copyAddress() {
+      var permanentAddress = document.getElementById("permanent").value;
+      document.getElementById("temporary").value = permanentAddress;
+    }
+  </script>
+</body>
+</html>
