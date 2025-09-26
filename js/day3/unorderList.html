@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Items in List</title>
+  </head>
+  <body>
+    <h2>Add Items to Unordered List</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item" />
+    <button onclick="addItem()">Add Item</button>
+
+    <h3>All Items:</h3>
+    <ul id="itemList"></ul>
+
+    <script>
+      let items = [];
+
+      function addItem() {
+        const input = document.getElementById("itemInput");
+        const value = input.value.trim();
+
+        if (value === "") {
+          alert("Please enter a value!");
+          return;
+        }
+
+        items.push(value);
+
+        input.value = "";
+
+        displayItems();
+      }
+
+      function displayItems() {
+        const ul = document.getElementById("itemList");
+        ul.innerHTML = "";
+
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          ul.appendChild(li);
+        });
+      }
+    </script>
+  </body>
+</html>
