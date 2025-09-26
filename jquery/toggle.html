@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" id="btnhide">Hide</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btnshow">Show</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btntoggle">Toggle</button> <br />
+    <img
+      src="../assets/mountain.jpg"
+      alt=""
+      id="img1"
+      width="300px"
+      height="200px"
+      style="transition: 2"
+    />
+    <br />
+    <hr />
+
+    <button type="button" id="btnup">Slide Up</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btndown">Slide Down</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btntogglep">Toggle</button> <br />
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eveniet
+      debitis impedit quae illo, deserunt eaque suscipit, architecto nemo
+      nostrum dolorum qui deleniti, repellendus sequi commodi necessitatibus a
+      quam asperiores! Ab ex error, ad, tempora vitae, iure voluptates culpa
+      reiciendis cumque ea repudiandae facilis! Aliquam accusantium quaerat,
+      doloremque reiciendis voluptatem aut libero a cumque officiis tempore
+      dolor explicabo deleniti doloribus. Nisi beatae deleniti maxime
+      voluptatibus, molestiae libero consequatur aliquam nemo placeat? Quisquam
+      ipsum consectetur perspiciatis illum autem fugiat rerum placeat tempore
+      optio nam sed, deserunt cumque error doloribus vitae hic? Doloremque odit
+      iusto ducimus quam vel excepturi culpa, provident ea suscipit expedita
+      ullam molestiae repellat quasi ut ad, eius atque distinctio sint doloribus
+      qui nesciunt quo? Quod aperiam officia consectetur. Necessitatibus at
+      ullam autem voluptate, cumque itaque dolore aspernatur debitis repellendus
+      non exercitationem blanditiis est rem corrupti odit fugit repellat,
+      consequuntur ducimus illum dolorem iure libero minus? Quo, provident
+      possimus. Error minus nam, porro non quis labore animi ratione
+      necessitatibus praesentium perferendis nesciunt facere tempore ex? Et,
+      blanditiis est. Quidem blanditiis quae aliquam dignissimos quibusdam
+      molestiae iste voluptates sapiente officiis. Ut, saepe! Delectus
+      cupiditate obcaecati maiores reiciendis accusantium dolores repudiandae
+      omnis, corrupti, maxime saepe beatae in cum eos cumque quam, itaque quo.
+      Laudantium, nobis. Recusandae sint numquam laboriosam esse voluptatum?
+      Laudantium consequatur possimus blanditiis, saepe totam ab nihil.
+      Reprehenderit fugiat commodi quae consequatur sunt, veniam sint. Ipsa
+      recusandae blanditiis, quod repudiandae quidem expedita aliquid
+      praesentium nisi ex possimus dolores! Impedit? Tempore officia quia
+      accusantium, fugiat enim veniam fugit voluptatum voluptas perferendis
+      ipsum earum nisi, nesciunt possimus quisquam rerum quod ex temporibus
+      animi non. Tempore, non fuga! Labore alias sequi accusantium? Voluptas
+      aliquam sunt dolorum aut aspernatur provident odio pariatur enim nulla
+      atque excepturi illo vero repellat officia, nam magnam commodi recusandae
+      ipsa animi laudantium rem. Vero eius dolorum excepturi provident.
+    </p>
+    <br />
+    <hr />
+    <img
+      src="../assets//❥Zoro••• _ One Piece.jpg"
+      height="300px"
+      width="300px"
+      alt=""
+      id="f1"
+    />
+    <br />
+    <button type="button" id="btnfadeout">Fade out</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btnfadein">Fade in</button> &nbsp;&nbsp;&nbsp;
+    <button type="button" id="btnfadetoggle">Toggle</button> <br />
+    <script>
+      $(document).ready(function () {
+        $("#btnhide").click(function () {
+          setTimeout(function () {
+            $("#img1").hide();
+          }, 2000); // hides after 2 seconds
+        });
+
+        $("#btnshow").click(function () {
+          setTimeout(function () {
+            $("#img1").show();
+          }, 2000); // shows after 2 seconds
+        });
+
+        $("#btntoggle").click(function () {
+          $("#img1").toggle(2000);
+        });
+      });
+
+      // Slide Up, Slide Down, Slide Toggle
+      $(document).ready(function () {
+        $("#btnup").click(function () {
+          $("#p1").slideUp();
+        });
+
+        $("#btndown").click(function () {
+          $("#p1").slideDown();
+        });
+
+        $("#btntogglep").click(function () {
+          $("#p1").slideToggle();
+        });
+
+        $("#btnfadeout").click(function () {
+          setTimeout(function () {
+            $("#f1").fadeOut(300); // fade out in 2 seconds
+          }, 1000); // waits 1 second before starting
+        });
+
+        $("#btnfadein").click(function () {
+          setTimeout(function () {
+            $("#f1").fadeIn(300); // fade in in 2 seconds
+          }, 1000);
+        });
+
+        $("#btnfadetoggle").click(function () {
+          setTimeout(function () {
+            $("#f1").fadeToggle(300); // toggle fade in/out
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
