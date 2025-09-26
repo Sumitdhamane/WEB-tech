@@ -34,10 +34,6 @@
         cursor: pointer;
       }
 
-      button:hover {
-        background-color: #45a049;
-      }
-
       ul {
         margin-top: 15px;
         padding: 0;
@@ -50,6 +46,20 @@
         margin: 4px 0;
         border: 1px solid #ddd;
         border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .deleteBtn {
+        background-color: #e74c3c;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      .displayBtn {
+        background-color: #2196f3;
       }
     </style>
   </head>
@@ -58,6 +68,7 @@
 
     <input type="text" id="itemInput" placeholder="Enter item" />
     <button onclick="addItem()">Add Item</button>
+    <button class="displayBtn" onclick="displayItems()">Display Items</button>
 
     <h3>All Items:</h3>
     <ul id="itemList"></ul>
@@ -75,9 +86,13 @@
         }
 
         items.push(value);
-
         input.value = "";
 
+        displayItems();
+      }
+
+      function deleteItem(index) {
+        items.splice(index, 1); // remove item at index
         displayItems();
       }
 
@@ -85,9 +100,21 @@
         const ul = document.getElementById("itemList");
         ul.innerHTML = "";
 
-        items.forEach((item) => {
+        if (items.length === 0) {
+          ul.innerHTML = "<li>No items to display</li>";
+          return;
+        }
+
+        items.forEach((item, index) => {
           const li = document.createElement("li");
           li.textContent = item;
+
+          const delBtn = document.createElement("button");
+          delBtn.textContent = "Delete";
+          delBtn.className = "deleteBtn";
+          delBtn.onclick = () => deleteItem(index);
+
+          li.appendChild(delBtn);
           ul.appendChild(li);
         });
       }
