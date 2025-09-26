@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details</title>
+  </head>
+  <body>
+    <script>
+      let employees = [
+        {
+          id: 1,
+          name: "Rahul Sharma",
+          post: "Software Engineer",
+          salary: 55000,
+          gender: "Male",
+          age: 25,
+          state: "Maharashtra",
+          bloodGroup: "A+",
+        },
+        {
+          id: 2,
+          name: "Priya Verma",
+          post: "Web Developer",
+          salary: 48000,
+          gender: "Female",
+          age: 24,
+          state: "Karnataka",
+          bloodGroup: "B+",
+        },
+        {
+          id: 3,
+          name: "Amit Patel",
+          post: "Manager",
+          salary: 80000,
+          gender: "Male",
+          age: 32,
+          state: "Gujarat",
+          bloodGroup: "O+",
+        },
+        {
+          id: 4,
+          name: "Sneha Reddy",
+          post: "UI/UX Designer",
+          salary: 47000,
+          gender: "Female",
+          age: 26,
+          state: "Telangana",
+          bloodGroup: "AB+",
+        },
+        {
+          id: 5,
+          name: "Arjun Singh",
+          post: "Backend Developer",
+          salary: 60000,
+          gender: "Male",
+          age: 28,
+          state: "Punjab",
+          bloodGroup: "O-",
+        },
+        {
+          id: 6,
+          name: "Neha Gupta",
+          post: "Frontend Developer",
+          salary: 52000,
+          gender: "Female",
+          age: 23,
+          state: "Delhi",
+          bloodGroup: "B-",
+        },
+        {
+          id: 7,
+          name: "Rohit Kumar",
+          post: "DevOps Engineer",
+          salary: 65000,
+          gender: "Male",
+          age: 29,
+          state: "Uttar Pradesh",
+          bloodGroup: "A-",
+        },
+        {
+          id: 8,
+          name: "Anjali Nair",
+          post: "Data Analyst",
+          salary: 57000,
+          gender: "Female",
+          age: 77,
+          state: "Kerala",
+          bloodGroup: "AB-",
+        },
+        {
+          id: 9,
+          name: "Vikram Joshi",
+          post: "HR",
+          salary: 50000,
+          gender: "Male",
+          age: 57,
+          state: "Rajasthan",
+          bloodGroup: "O+",
+        },
+        {
+          id: 10,
+          name: "Pooja Mishra",
+          post: "Machine Learning Engineer",
+          salary: 75000,
+          gender: "Female",
+          age: 60,
+          state: "Madhya Pradesh",
+          bloodGroup: "A+",
+        },
+      ];
+
+      function showEmployees(arr) {
+        arr.forEach((emp) => {
+          document.write(`
+              ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>  
+            `);
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      function showFemaleEmployees(arr) {
+        document.write(`Female employee <br>`);
+        arr.forEach((emp) => {
+          if (emp.gender === "Female") {
+            document.write(`
+             ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>
+
+          `);
+          }
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      function showsalary(arr) {
+        document.write(`salary employee <br>`);
+        arr.forEach((emp) => {
+          if (emp.salary > 30000 && emp.salary < 70000) {
+            document.write(`
+             ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>
+
+          `);
+          }
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      function showpost(arr) {
+        document.write(`post employee <br>`);
+        arr.forEach((emp) => {
+          if (emp.post == "HR" || emp.post == "Manager") {
+            document.write(`
+             ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>
+
+          `);
+          }
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      function showAge(arr) {
+        document.write(`age employee <br>`);
+        arr.forEach((emp) => {
+          if (emp.age > 55) {
+            document.write(`
+             ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>
+
+          `);
+          }
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      function showBloodGrp(arr) {
+        document.write(`bloodGroup o+ employee <br>`);
+        arr.forEach((emp) => {
+          if (emp.bloodGroup === "O+") {
+            document.write(`
+             ID: ${emp.id},Name: ${emp.name},Post: ${emp.post},Salary: ${emp.salary},Gender: ${emp.gender},Age: ${emp.age},State: ${emp.state},Blood Group: ${emp.bloodGroup}<br>
+
+          `);
+          }
+        });
+        document.write(`<hr><hr>`);
+      }
+
+      showEmployees(employees);
+      showFemaleEmployees(employees);
+      showsalary(employees);
+      showpost(employees);
+      showAge(employees);
+      showBloodGrp(employees);
+    </script>
+  </body>
+</html>

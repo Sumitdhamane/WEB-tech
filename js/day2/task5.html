@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace Example</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #e6f2f5;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+      }
+
+      #d1,
+      #d2 {
+        border: 2px solid #ccc;
+        min-height: 250px;
+        width: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: 15px;
+        color: #333;
+      }
+
+      #d1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        font-size: 14px;
+        resize: none;
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 3px;
+      }
+
+      input {
+        width: 95%;
+        margin: 5px 0 10px 0;
+        padding: 7px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        font-size: 14px;
+      }
+
+      .btns {
+        text-align: center;
+      }
+
+      button {
+        margin: 5px;
+        padding: 7px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #4c9ed9;
+        color: white;
+        font-weight: bold;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        background-color: #357cad;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Text Display -->
+      <div id="d1">
+        <h2>Text Area</h2>
+        <textarea id="textArea">
+Technology has revolutionized the way we live and work. From smartphones to artificial intelligence, every aspect of our lives is touched by innovation. Web development, in particular, plays a crucial role in connecting people, businesses, and communities across the globe.</textarea
+        >
+      </div>
+
+      <!-- Replace Options -->
+      <div id="d2">
+        <h2>Replace Tool</h2>
+        <label>Enter text to Replace:</label>
+        <input type="text" id="replaceword" />
+
+        <label>Enter New text:</label>
+        <input type="text" id="newword" />
+
+        <div class="btns">
+          <button onclick="Replace()">Replace</button>
+          <button onclick="Replaceall()">Replace All</button>
+          <button onclick="ResetText()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const originalText = "Welcome all in YCP AIT. Good morning all.";
+
+      function Replace() {
+        let msg = document.getElementById("textArea").value;
+        let oldtext = document.getElementById("replaceword").value;
+        let newtext = document.getElementById("newword").value;
+        document.getElementById("textArea").value = msg.replace(
+          oldtext,
+          newtext
+        );
+      }
+
+      function Replaceall() {
+        let msg = document.getElementById("textArea").value;
+        let oldtext = document.getElementById("replaceword").value;
+        let newtext = document.getElementById("newword").value;
+        document.getElementById("textArea").value = msg.replaceAll(
+          oldtext,
+          newtext
+        );
+      }
+
+      function ResetText() {
+        document.getElementById("textArea").value = originalText;
+      }
+    </script>
+  </body>
+</html>

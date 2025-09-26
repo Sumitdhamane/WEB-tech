@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date & Time Example</title>
+  </head>
+  <body>
+    <h1>Day and Month name</h1>
+
+    <h2 id="d1"></h2>
+    <p>
+      <span>Day name: </span><span id="day"></span><br />
+      <span>Month name: </span><span id="month"></span>
+    </p>
+
+    <script>
+      let dateObj = new Date();
+      document.getElementById("d1").innerHTML = dateObj;
+
+      let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      let monthIndex = dateObj.getMonth();
+      console.log(monthIndex);
+      let dayIndex = dateObj.getDay();
+
+      document.getElementById("month").innerHTML = months[monthIndex];
+      document.getElementById("day").innerHTML = days[dayIndex];
+    </script>
+  </body>
+</html>

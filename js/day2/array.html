@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Object Display Example</title>
-</head>
-<body>
-  <script>
-    // Object 1 (Traditional Display with +)
-    let student1 = {
-      name: "Sumit",
-      age: 22,
-      course: "Information Technology",
-      college: "Shivajirao S. Jondhale College of Engineering"
-    };
+  <head>
+    <title>Object Display Example</title>
+  </head>
+  <body>
+    <script>
+      // Object 1 (Traditional Display with +)
+      let student1 = {
+        name: "Sumit",
+        age: 22,
+        course: "Information Technology",
+        college: "Shivajirao S. Jondhale College of Engineering",
+      };
 
-    // Traditional way (using + for concatenation)
-    document.write("<h2>Traditional Display (+)</h2>");
-    document.write("Name: " + student1.name + "<br>");
-    document.write("Age: " + student1.age + "<br>");
-    document.write("Course: " + student1.course + "<br>");
-    document.write("College: " + student1.college + "<br><hr>");
+      // Traditional way (using + for concatenation)
+      document.write("<h2>Traditional Display (+)</h2>");
+      document.write("Name: " + student1.name + "<br>");
+      document.write("Age: " + student1.age + "<br>");
+      document.write("Course: " + student1.course + "<br>");
+      document.write("College: " + student1.college + "<br><hr>");
 
-    // Function to display using Template Literals (``)
-    function displayStudent(student) {
-      document.write(`<h2>Function Display (Template Literal)</h2>
+      // Function to display using Template Literals (``)
+      function displayStudent(student) {
+        document.write(`<h2>Function Display (Template Literal)</h2>
         Name: ${student.name} <br>
         Age: ${student.age} <br>
         Course: ${student.course} <br>
         College: ${student.college} <br><hr>`);
-    }
+      }
 
-    // Object 2 (Function Display with ``)
-    let student2 = {
-      name: "Rahul",
-      age: 21,
-      course: "Computer Engineering",
-      college: "Mumbai University"
-    };
+      // Object 2 (Function Display with ``)
+      let student2 = {
+        name: "Rahul",
+        age: 21,
+        course: "Computer Engineering",
+        college: "Mumbai University",
+      };
 
-    // Call function
-    displayStudent(student2);
-  </script>
-</body>
+      // Call function
+      displayStudent(student2);
+    </script>
+  </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div style="justify-content: center">
+      <form action="" onsubmit="return checks()">
+        <label for="">Enter name</label>
+        <br />
+        <input id="name" type="text" placeholder="Name" onblur="checkName()" />
+        <br /><br />
+
+        <label for="">Enter Password</label>
+        <br />
+        <input
+          id="pass"
+          type="password"
+          placeholder="Password"
+          onblur="checkPassword()"
+        />
+        <br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function checkName() {
+        let n = document.getElementById("name").value.trim();
+        let pat = /^[a-zA-Z]{3,10}$/;
+
+        if (!n.match(pat)) {
+          alert("Invalid Name: Only letters allowed (3-10 chars)");
+          return false;
+        }
+        return true;
+      }
+
+      function checkPassword() {
+        let p = document.getElementById("pass").value.trim();
+
+        if (p.length < 6) {
+          alert("Password must be at least 6 characters");
+          return false;
+        }
+        return true;
+      }
+
+      function checks() {
+        return checkName() && checkPassword();
+      }
+    </script>
+  </body>
+</html>

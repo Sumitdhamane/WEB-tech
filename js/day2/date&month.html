@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date & Time Example</title>
+  </head>
+  <body>
+    <h3 id="d1"></h3>
+    <h3 id="d2"></h3>
+    <h3 id="d3"></h3>
+    <h2 id="d4"></h2>
+
+    <script>
+      let dateObj = new Date();
+
+      // Full Date
+      document.getElementById("d1").innerHTML = dateObj;
+
+      // Only Day of Month
+      document.getElementById("d2").innerHTML = dateObj.getDate();
+
+      // Get Month Name
+      let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      let monthIndex = dateObj.getMonth(); // 0–11
+      document.getElementById("d4").innerHTML = months[monthIndex];
+
+      // Live Clock
+      function myClock() {
+        let d = new Date();
+        document.getElementById("d3").innerHTML = d.toLocaleTimeString();
+      }
+
+      setInterval(myClock, 1000);
+    </script>
+  </body>
+</html>
