@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="a1">
+      <p id="p1">hello from here</p>
+      <p>hiiiiiiiiiiiii</p>
+    </div>
+
+    <script>
+      let parent = document.getElementById("a1");
+
+      let child = document.createElement("p");
+      child.setAttribute("id", "p3");
+      child.innerText = "hii from ";
+      parent.append(child);
+    </script>
+  </body>
+</html>
