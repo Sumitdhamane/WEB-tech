@@ -1,0 +1,104 @@
+{
+  "employe": [
+    {
+      "id": "1",
+      "ename": "Rahul Sharma",
+      "epost": "Software Engineer",
+      "esalary": 55000,
+      "eage": 25,
+      "egender": "Male",
+      "estate": "Maharashtra",
+      "ebloodGroup": "A+"
+    },
+    {
+      "id": "2",
+      "ename": "Priya Verma",
+      "epost": "Web Developer",
+      "esalary": 48000,
+      "eage": 24,
+      "egender": "Female",
+      "estate": "Karnataka",
+      "ebloodGroup": "B+"
+    },
+    {
+      "id": "3",
+      "ename": "Amit Patel",
+      "epost": "Manager",
+      "esalary": 80000,
+      "eage": 32,
+      "egender": "Male",
+      "estate": "Gujarat",
+      "ebloodGroup": "O+"
+    },
+    {
+      "id": "4",
+      "ename": "Sneha Reddy",
+      "epost": "UI/UX Designer",
+      "esalary": 47000,
+      "eage": 26,
+      "egender": "Female",
+      "estate": "Telangana",
+      "ebloodGroup": "AB+"
+    },
+    {
+      "id": "5",
+      "ename": "Arjun Singh",
+      "epost": "Backend Developer",
+      "esalary": 60000,
+      "eage": 28,
+      "egender": "Male",
+      "estate": "Punjab",
+      "ebloodGroup": "O-"
+    },
+    {
+      "id": "6",
+      "ename": "Neha Gupta",
+      "epost": "Frontend Developer",
+      "esalary": 52000,
+      "eage": 23,
+      "egender": "Female",
+      "estate": "Delhi",
+      "ebloodGroup": "B-"
+    },
+    {
+      "id": "7",
+      "ename": "Rohit Kumar",
+      "epost": "DevOps Engineer",
+      "esalary": 65000,
+      "eage": 29,
+      "egender": "Male",
+      "estate": "Uttar Pradesh",
+      "ebloodGroup": "A-"
+    },
+    {
+      "id": "8",
+      "ename": "Anjali Nair",
+      "epost": "Data Analyst",
+      "esalary": 57000,
+      "eage": 77,
+      "egender": "Female",
+      "estate": "Kerala",
+      "ebloodGroup": "AB-"
+    },
+    {
+      "id": "9",
+      "ename": "Vikram Joshi",
+      "epost": "HR",
+      "esalary": 50000,
+      "eage": 57,
+      "egender": "Male",
+      "estate": "Rajasthan",
+      "ebloodGroup": "O+"
+    },
+    {
+      "id": "10",
+      "ename": "sumit",
+      "epost": "Chairman",
+      "esalary": "250000",
+      "eage": "25",
+      "egender": "male",
+      "estate": "maharastra",
+      "ebloodGroup": "A+"
+    }
+  ]
+}
