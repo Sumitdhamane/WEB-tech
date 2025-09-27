@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "pname": "Mouse",
+      "pprice": "2000",
+      "company": "Ib",
+      "quantity": "30",
+      "id": "2"
+    },
+    {
+      "pname": "Mobile",
+      "pprice": "100000",
+      "company": "Apple",
+      "quantity": "1",
+      "id": "5"
+    },
+    {
+      "id": "5c67",
+      "pname": "Adaptor",
+      "pprice": "700",
+      "company": "toshiba",
+      "quantity": "8"
+    },
+    {
+      "id": "b9fd",
+      "pname": "laptop",
+      "pprice": "2500000",
+      "company": "dell",
+      "quantity": "2"
+    }
+  ],
+  "employe": [
+    {
+      "id": "1",
+      "ename": "Panchashil",
+      "epost": "Developer",
+      "esalary": 55000,
+      "eaddress": "Pune",
+      "ecompany": "Hematite"
+    }
+  ]
+}
