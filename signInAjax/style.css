@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.maincont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cont {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 350px;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.row input {
+  padding: 8px;
+  margin: 5px;
+  width: 140px;
+}
+
+.row input[type="email"] {
+  width: 300px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
