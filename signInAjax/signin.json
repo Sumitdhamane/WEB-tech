@@ -1,19 +1,69 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "userid": "admin@gmail.com",
       "userpass": "admin@123"
     },
     {
-      "id": 2,
+      "id": "2",
       "userid": "king@gmail.com",
       "userpass": "king@123"
     },
     {
-      "id": 3,
+      "id": "3",
       "userid": "queen@gmail.com",
       "userpass": "queen@123"
+    },
+    {
+      "id": "00ca",
+      "username": "dhamanesumit7@gmail.com",
+      "password": "Sumit123"
+    },
+    {
+      "id": "486f",
+      "username": "user1@gmail.com",
+      "password": "user123"
+    },
+    {
+      "id": "7bb8",
+      "username": "swapnil@gmail.com",
+      "password": "swapnil123"
+    },
+    {
+      "id": "0ee4",
+      "username": "amaan@gmail.com",
+      "password": "amaan@123"
+    },
+    {
+      "id": "fa71",
+      "username": "shreyas@gmail.com",
+      "password": "shreyas123"
+    },
+    {
+      "id": "6c1b",
+      "username": "aaryan@gmail.com",
+      "password": "aaryan123"
+    },
+    {
+      "id": "6db9",
+      "username": "manish@gmail.com",
+      "password": "manish123"
+    },
+    {
+      "id": "3bb7",
+      "username": "shreya@gmail.com",
+      "password": "shreya123"
+    },
+    {
+      "id": "98a8",
+      "username": "kshitij@gmail.com",
+      "password": "kshitij@123"
+    },
+    {
+      "id": "2fd1",
+      "username": "anuj@gmail.com",
+      "password": "anuj111"
     }
   ]
 }

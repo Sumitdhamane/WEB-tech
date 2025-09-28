@@ -13,28 +13,34 @@
         <form>
           <!-- First and Last Name -->
           <div class="row">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
+            <input type="text" placeholder="First Name" id="name" />
+            <input type="text" placeholder="Last Name" id="name" />
           </div>
 
           <!-- Email -->
           <div class="row">
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" id="username" />
           </div>
 
           <!-- Password and Confirm Password -->
           <div class="row">
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <input type="password" placeholder="Password" id="password" />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="confirmPassword"
+            />
           </div>
 
           <!-- Button -->
           <div class="row">
-            <button type="submit" onclick="register()">Sign Up</button>
+            <a href="http://127.0.0.1:5500/signInAjax/sign.html">
+              <button type="submit" onclick="register()">Sign Up</button>
+            </a>
           </div>
         </form>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

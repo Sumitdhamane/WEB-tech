@@ -1,26 +1,32 @@
 function register() {
-  let nam = document.getElementById("username").value;
+  let uid = document.getElementById("username").value;
   let pass = document.getElementById("password").value;
   let pass1 = document.getElementById("confirmPassword").value;
+
   if (pass !== pass1) {
-    window.alert("enter both password same");
+    window.alert("Enter both passwords the same");
   } else {
     let prod = {
-      username: nam,
+      username: uid,
       password: pass,
     };
     let prodJson = JSON.stringify(prod);
 
     let xmlObj = new XMLHttpRequest();
     xmlObj.onload = function () {
-      window.alert("Product Added Successfully");
-      window.location.href = "C:/Users/Sahil Jagtap/ajax/ajax/login.html";
+      window.alert("Registration done Successfully");
 
+      // redirect to signin.html (same folder)
+      window.location.href = "http://127.0.0.1:5500/signInAjax/sign.html";
+
+      // clear form fields
       document.getElementById("username").value = "";
       document.getElementById("password").value = "";
       document.getElementById("confirmPassword").value = "";
     };
-    xmlObj.open("POST", "http://localhost:8888/users");
+
+    xmlObj.open("POST", "http://localhost:4545/users");
+    xmlObj.setRequestHeader("Content-Type", "application/json");
     xmlObj.send(prodJson);
   }
 }
