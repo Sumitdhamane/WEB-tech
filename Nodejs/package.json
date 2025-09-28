@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Sumitdhamane/WEB-tech#readme",
   "dependencies": {
-    "chalk": "^5.6.2"
+    "chalk": "^5.6.2",
+    "validator": "^13.15.15"
   }
 }
