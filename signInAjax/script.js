@@ -26,7 +26,7 @@ function register() {
     };
 
     xmlObj.open("POST", "http://localhost:4545/users");
-    xmlObj.setRequestHeader("Content-Type", "application/json");
+    xmlObj.setRequestHeader("Content-Type", "signin/json");
     xmlObj.send(prodJson);
   }
 }
