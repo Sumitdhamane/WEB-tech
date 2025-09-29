@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,8 +21,7 @@
   "homepage": "https://github.com/Sumitdhamane/WEB-tech#readme",
   "dependencies": {
     "chalk": "^5.6.2",
-    "fs": "^0.0.1-security",
-    "http": "^0.0.1-security",
+    "nodemon": "^3.1.10",
     "prompt": "^1.3.0",
     "validator": "^13.15.15"
   }
