@@ -1,0 +1,16 @@
+step 1: create package.json file 
+npm init
+
+step 2: install express js
+npm i express
+
+step 3: install .env
+npm i .env
+
+step4: create server file by using express js and execute it
+
+step5: create a public folder 
+                    html folder
+                        css folder
+                            js folder
+                                images folser

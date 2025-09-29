@@ -1,0 +1,20 @@
+.myHeading {
+  color: red;
+  text-align: center;
+  background-color: aqua;
+  text-decoration: underline;
+}
+
+.myHeading:hover {
+  background-color: black;
+  color: white;
+}
+
+.myInfo {
+  color: aquamarine;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+  background-color: rgb(rgb(160, 18, 129), rgb(33, 207, 33), rgb(41, 152, 180));
+  color: black;
+}
