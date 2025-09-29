@@ -13,4 +13,6 @@ step5: create a public folder
                     html folder
                         css folder
                             js folder
-                                images folser
+                                images folder
+
+how to server static file on browser by using express.static middleware 
