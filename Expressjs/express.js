@@ -4,17 +4,20 @@ const port = process.env.port;
 const host = process.env.HOST;
 const app = express();
 
-app.get("/", (req, res, next) => {
-  res.send("Simple get Home");
+app.get("/index.html", (req, res, next) => {
+  res.sendFile(__dirname + "/index.html");
 });
-app.get("/about", (req, res, next) => {
-  res.send("Simple get about");
+app.get("/about.html/:id", (req, res, next) => {
+  res.sendFile(__dirname + "/about.html");
 });
-app.get("/contact", (req, res, next) => {
-  res.send("Simple get contact");
+app.get("/contact.html", (req, res, next) => {
+  res.sendFile(__dirname + "/contact.html");
 });
-app.get("/service", (req, res, next) => {
-  res.send("Simple get service");
+app.get("/service.html", (req, res, next) => {
+  res.sendFile(__dirname + "/service.html");
+});
+app.get(/.*/, (req, res, next) => {
+  res.sendFile(__dirname + "/error.html");
 });
 
 app.listen(port, () => {
