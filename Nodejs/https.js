@@ -4,6 +4,7 @@ const http = require("http");
 const fs = require("fs");
 require("dotenv").config();
 const PORT = process.env.PORT;
+const HOST = process.env.Host;
 let server = http.createServer((req, res) => {
   if (req.url == "/index.html") {
     res.writeHead(200, { "content-type": "text/html" });
@@ -29,5 +30,5 @@ let server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Server created successfully on ${PORT}`);
+  console.log(`Server created successfully on ${HOST}:${PORT}`);
 });
