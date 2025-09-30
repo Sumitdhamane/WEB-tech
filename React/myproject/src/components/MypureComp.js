@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import { Component, PureComponent } from "react";
 
-export class MypureComp extends Component {
+export class MypureComp extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -10,7 +10,7 @@ export class MypureComp extends Component {
     return (
       <div>
         <h2>This is my..</h2>
-        <p>Employee Name: this.state.name</p>
+        <p>Employee Name: {this.state.name}</p>
       </div>
     );
   }
