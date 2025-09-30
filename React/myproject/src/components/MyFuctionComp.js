@@ -12,7 +12,7 @@ class MyFunctionComp extends Component {
           type="button"
           onClick={() => this.greeting("shreyas", "om", "amaan")}
         >
-          Greeting
+          click me
         </button>
       </div>
     );
