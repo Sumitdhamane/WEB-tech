@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class ClassComp extends Component {
+class MyFunctionComp extends Component {
   render() {
     return (
       <div>
-        <h1>Class Component</h1>
+        <h1>Class 2 Component</h1>
         <p>
           Name:{this.props.fname} and Post:{this.props.post}
         </p>
@@ -13,4 +13,4 @@ class ClassComp extends Component {
   }
 }
 
-export default ClassComp;
+export default MyFunctionComp;
