@@ -1,55 +1,81 @@
-const connection = require("./connection");
+const con = require("./connection");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+//const cors = require('cors');
 const express = require("express");
 const app = express();
-// app.use(cors());
+
+//app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res, next) => {
-  res.send("Welcome ypu all in my REST API");
+  res.send("Welcome You All In My REST API");
 });
 
 app.get("/products", (req, res, next) => {
-  //   res.send("Get request");
-  //   console.log("Get request");
-  connection.query("SELECT * FROM products", (error, result) => {
+  // res.send("this is simple get request for product");
+  con.query("SELECT * FROM products", (error, result) => {
     if (error) throw error;
     console.log(result);
-
     res.send(result);
   });
 });
-
 app.get("/products/:id", (req, res, next) => {
-//   res.send("Get single request");
-//   console.log("Get single request");
- connection.query("SELECT * FROM products", (error, result) => {
-    if (error) throw error;
-    console.log(result);
-
-   
-    res.send(result);
- }
+  // res.send("this is simple get request for product");
+  con.query(
+    `SELECT * FROM products WHERE id=${req.params.id}`,
+    (error, result) => {
+      if (error) throw error;
+      console.log(result);
+      res.send(result);
+    }
+  );
 });
 
 app.delete("/products/:id", (req, res, next) => {
-  res.send("delete single request");
-  console.log("delete single request");
+  //  res.send(req.params.id);
+  con.query(
+    `DELETE FROM products WHERE id=${req.params.id}`,
+    (error, result) => {
+      if (error) throw error;
+      res.send(result);
+    }
+  );
 });
 
 app.post("/products", (req, res, next) => {
-  res.send("add  request");
-  console.log("add  request");
+  // res.send("this is simple post request for product");
+  // let pname = req.body.pname;
+  // let pprice = req.body.pprice;
+  // let pcompany = req.body.pcompany;
+  // let pquantity = req.body.pquantity;
+  const { pname, pprice, pcompany, pquantity } = req.body;
+
+  let insertQuery = `INSERT INTO products(pname,pprice,pcompany,pquantity) VALUES(?,?,?,?)`;
+
+  con.query(
+    insertQuery,
+    [pname, pprice, pcompany, pquantity],
+    (error, result) => {
+      res.send(`Product added successfully`, result);
+    }
+  );
 });
 
 app.put("/products/:id", (req, res, next) => {
-  res.send("put single request");
-  console.log("put single request");
+  const { id } = req.params;
+  const { pname, pprice, pcompany, pquantity } = req.body;
+  let updateQuery = `UPDATE products SET pname=?,pprice=?,pcompany=?,pquantity=? WHERE id=${id}`;
+
+  con.query(
+    updateQuery,
+    [pname, pprice, pcompany, pquantity],
+    (error, result) => {
+      res.send("Product Updated Successfully");
+    }
+  );
 });
 
-//server
-app.listen(9874, () => {
-  console.log("server started at 9874");
+app.listen(1998, () => {
+  console.log(`server get started..`);
 });
