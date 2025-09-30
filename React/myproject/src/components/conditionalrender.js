@@ -10,15 +10,16 @@ class Condition extends Component {
   }
   render() {
     let msg = "";
-    if (!this.state.isCon) {
-      //   return <h2>admin login</h2>;
-      msg = "Admin login";
-    } else {
-      //   return <h2>User login</h2>;
-      msg = "User login";
-    }
+    // if (!this.state.isCon) {
 
-    return <h2>{msg}</h2>;
+    //   msg = "Admin login";
+    // } else {
+
+    //   msg = "User login";
+    // }
+    // return <h2>{msg}</h2>;
+
+    return this.state.isCon ? <h1>Admin login</h1> : <h1>User login</h1>;
   }
 }
 
