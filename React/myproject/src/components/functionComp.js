@@ -3,7 +3,9 @@ const FunctiomComp = (props) => {
     <div>
       <h1>Function Component</h1>
       <p>
-        Name:{props.fname} and Post:{props.post}
+        Name:{props.fname}
+        Last-Name:{props.lname} Contact:{props.contact} gender:{props.gender}
+        address:{props.address}
       </p>
     </div>
   );
