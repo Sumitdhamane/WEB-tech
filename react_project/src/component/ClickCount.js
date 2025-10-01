@@ -1,31 +1,32 @@
 import React, { Component } from "react";
+import Hoccomp from "./Hoccomp";
 
-export class ClickCount extends Component {
-  constructor(props) {
-    super(props);
+class ClickCount extends Component {
+  //   constructor(props) {
+  //     super(props);
 
-    this.state = {
-      count: 0,
-    };
-  }
-  incrementdata = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  };
+  //     this.state = {
+  //       count: 0,
+  //     };
+  //   }
+  //   incrementdata = () => {
+  //     this.setState({
+  //       count: this.state.count + 1,
+  //     });
+  //   };
 
   render() {
     return (
       <div>
         <h1>Click counter</h1>
         <p>
-          Counter: <strong>{this.state.count}</strong>
+          Counter: <strong>{this.props.count}</strong>
         </p>
         <button
           className="btn btn-primary"
           type="button"
           onClick={() => {
-            this.incrementdata();
+            this.props.incrementdata();
           }}
         >
           Increment++
@@ -35,4 +36,4 @@ export class ClickCount extends Component {
   }
 }
 
-export default ClickCount;
+export default Hoccomp(ClickCount);
