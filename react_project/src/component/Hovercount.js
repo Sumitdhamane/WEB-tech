@@ -22,6 +22,7 @@ class Hovercount extends Component {
           Counter: <strong>{this.state.count}</strong>
         </p>
         <h4
+          style={{ backgroundColor: "sandybrown" }}
           onMouseOver={() => {
             this.Onhover();
           }}
