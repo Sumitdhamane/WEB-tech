@@ -1,14 +1,15 @@
 import "./App.css";
 import ErrorBoundary from "./component/ErrorBoundary";
-// import ClickCount from "./component/ClickCount";
-// import Hovercount from "./component/Hovercount";
+import ClickCount from "./component/ClickCount";
+import Hovercount from "./component/Hovercount";
 import UserComp from "./component/UserComp";
+import UseEffectComp from "./Layout/UseEffectComp";
 
 function App() {
   return (
     <div className="App">
-      {/* <ClickCount />
-      <Hovercount /> */}
+      <ClickCount />
+      <Hovercount />
       <ErrorBoundary>
         <UserComp name=" Sumit " />
       </ErrorBoundary>
